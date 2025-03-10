@@ -32,25 +32,25 @@ public class TwoSum_1 {
     // time complexity O(n^2)  & space complexity O(1)
     public static int[] BruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
+            for (int j = i + 1; j < nums.length; j++) { // j要比ｉ大，避免重複的值
+                if (nums[i] + nums[j] == target) { // 找到答案
+                    return new int[]{i, j}; // 找到答案回傳index
                 }
             }
         }
-        return new int[]{};
+        return new int[]{}; // 沒找到答案回傳空的
     }
 
     // time complexity O(n)  & space complexity O(n)
     public static int[] HashMap(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            int anotherNumber = target - nums[i];
-            if (map.containsKey(anotherNumber)) {
-                return new int[]{map.get(anotherNumber), i};
+            int anotherNumber = target - nums[i]; // 計算一組中的另一個數字
+            if (map.containsKey(anotherNumber)) { // 如果map裡包含另一個數字，代表找到答案
+                return new int[]{map.get(anotherNumber), i}; // 找到答案回傳index
             }
-            map.put(nums[i], i);
+            map.put(nums[i], i); // 如果map不包含另一個數字，將目前的數字和index存入map
         }
-        return new int[]{};
+        return new int[]{}; // 沒找到答案回傳空的
     }
 }
