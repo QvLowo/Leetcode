@@ -6,15 +6,19 @@ import java.util.HashMap;
 
 /**
  * Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+ * 給定一個整數陣列 nums 和一個整數 target，請回傳兩個數字的索引，使它們的總和等於 target。
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
+ * 你可以假設每組輸入都只有一組唯一解，並且不能重複使用相同的元素。
  * You can return the answer in any order.
+ * 你可以以任何順序回傳答案。
+ *
  * Example:
  * Input: nums = [2,7,11,15], target = 9
  * Output: [0,1]
  * Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
  */
 
-public class TwoSum {
+public class TwoSum_1 {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
@@ -50,4 +54,3 @@ public class TwoSum {
         return new int[]{};
     }
 }
-
