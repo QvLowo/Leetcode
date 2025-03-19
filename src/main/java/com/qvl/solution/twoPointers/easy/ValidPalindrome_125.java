@@ -43,6 +43,7 @@ public class ValidPalindrome_125 {
         System.out.printf("output: %s%n", isPalindrome(s3)); // true
     }
 
+    // time complexity O(n) & space complexity O(1)
     public static boolean isPalindrome(String s) {
         // 空的直接回true(如範例)
         if (s.isEmpty()) {
