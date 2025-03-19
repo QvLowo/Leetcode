@@ -71,7 +71,7 @@ public class MergeSortedArray_88 {
 
     }
 
-    // 從後往前雙指針 (可以想像畫面是從nums1的最後面往前塞入值)
+    // 從後往前雙指針 = 指針從最後面往前跑 (可以想像畫面是從nums1的最後面往前塞入值)
     // time complexity O(m+n) & space complexity O(1) 同一個陣列處理，沒有額外開空間
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         // i = nums1有值的最後一位 , j = nums2有值的最後一位 , k = nums1的最後一位
