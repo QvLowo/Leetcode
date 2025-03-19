@@ -1,4 +1,4 @@
-package com.qvl.solution.stack;
+package com.qvl.solution.stack.easy;
 
 import java.util.Stack;
 

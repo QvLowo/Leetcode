@@ -1,4 +1,4 @@
-package com.qvl.solution.slidingWindow;
+package com.qvl.solution.slidingWindow.medium;
 
 import java.util.HashSet;
 
