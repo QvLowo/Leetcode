@@ -29,7 +29,7 @@ public class MoveZeroes_283 {
 
     }
 
-    // Time Complexity O(n) & Space Complexity O(1)
+    // Time Complexity O(n) & Space Complexity O(1) (more fast)
     public static void moveZeroes(int[] nums) {
         // 遇到值是0 insertIndex不變 繼續往下比
         int insertIndex = 0; // 要塞入的位置
@@ -42,6 +42,23 @@ public class MoveZeroes_283 {
         // 剩下的位子塞0
         while (insertIndex < nums.length) {
             nums[insertIndex++] = 0;
+        }
+    }
+
+    // Time Complexity O(n) & Space Complexity O(1)
+    public static void moveZeroesV2(int[] nums) {
+        int j = 0; // j放非零
+
+        for (int i = 0; i < nums.length; i++) { // i找非零
+            if (nums[i] != 0) {
+                // i != j 才交換位置，避免相同的值在交換
+                if (i != j) {
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+                j++;
+            }
         }
     }
 }
