@@ -1,5 +1,7 @@
 package com.qvl.solution.binarySearch.easy;
 
+import java.sql.Time;
+
 /**
  * Given an array of integers nums which is sorted in ascending order, and an
  * integer target, write a function to search target in nums. If target exists,
@@ -18,9 +20,22 @@ package com.qvl.solution.binarySearch.easy;
  * Input: nums = [-1,0,3,5,9,12], target = 2
  * Output: -1
  * Explanation: 2 does not exist in nums so return -1
+ * 
+ * 把他當成ro小遊戲：終極密碼來想，就是二分法owo！！
  */
 public class BinarySearch_704 {
 
+    public static void main(String[] args) {
+        int[] nums1 = { -1, 0, 3, 5, 9, 12 };
+        int target1 = 9;
+        System.out.printf("output: %s%n", search(nums1, target1)); // 4
+
+        int[] nums2 = { -1, 0, 3, 5, 9, 12 };
+        int target2 = 2;
+        System.out.printf("output: %s%n", search(nums2, target2)); // -1
+    }
+
+    // Time Complexity O(log n) & Space Complexity O(1)
     public static int search(int[] nums, int target) {
         int leftIndex = 0; // 頭
         int rightIndex = nums.length - 1; // 尾
@@ -33,9 +48,9 @@ public class BinarySearch_704 {
                 return middle; // 找到目標
                 // 因為是升序，如果中間的值 小於 目標值
             } else if (nums[middle] < target) {
-                leftIndex = middle + 1; // 左邊的值砍掉，往右邊搜尋
+                leftIndex = middle + 1; // 排除原本左指針的值，往右邊搜尋
             } else {
-                rightIndex = middle - 1; // 右邊的值砍掉，往左邊搜尋
+                rightIndex = middle - 1; // 排除右指針的值，往左邊搜尋
             }
         }
 
