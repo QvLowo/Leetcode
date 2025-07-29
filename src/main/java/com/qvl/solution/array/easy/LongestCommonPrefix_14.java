@@ -1,4 +1,4 @@
-package com.qvl.solution.array;
+package com.qvl.solution.array.easy;
 
 /**
  * Write a function to find the longest common prefix string amongst an array of
