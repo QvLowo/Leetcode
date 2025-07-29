@@ -1,8 +1,5 @@
 package com.qvl.solution.array.easy;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Given an array nums of size n, return the majority element.
  * 給定一個大小為 n 的陣列 nums，請你回傳陣列中的多數元素。
@@ -24,6 +21,7 @@ public class MajorityElement_169 {
 
     }
 
+    // 保證多數元素存在的情況用這個演算法 ⬇️
     // Boyer-Moore 投票演算法
     // time complexity O(n) & space complexity O(1)
     public static int majorityElement(int[] nums) {
